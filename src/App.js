@@ -6,14 +6,14 @@ import './components/Todo.css'
 
 const initializedState = [
   {
-    task: 'Organize Garage',
+    task: 'This is a task',
     id: 1528817077286,
     completed: false
   },
   {
-    task: 'Bake Cookies',
+    task: 'Click on task to mark as Done',
     id: 15288170843534,
-    completed: true
+    completed: false
   }
 ];
 
@@ -24,8 +24,9 @@ class App extends React.Component {
   constructor(){
     super()
     this.state = {
-      toDo: initializedState
+      toDo: JSON.parse(localStorage.getItem('items')) || initializedState
     }
+    console.log('initial state', this.state);
   }
 
   // handler functions
@@ -41,8 +42,9 @@ class App extends React.Component {
     this.setState({
       toDo: [ ...this.state.toDo,
         newItem]
-    })
-
+    },() => {localStorage.setItem('items', JSON.stringify(this.state.toDo))})
+   
+    
   }
 
   toggleCompleted = itemId =>{
