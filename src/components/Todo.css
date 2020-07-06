@@ -1,3 +1,69 @@
+body{
+    margin:0;
+    padding:0;
+    color: linen;
+    font-family: sans-serif;
+}
+
+.app{
+    text-align: center;
+    background-color: #191970;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app-title{
+    background-color: #AFEEEE;
+    padding: 16px;
+    width: fit-content;
+    font-weight: 500;
+    font-size: 32px;
+    margin: 100px 0 16px;
+    color: #191970;
+}
+
+.todo-form{
+    background-color: #AFEEEE;
+    width: 600px;
+    padding: 32px;
+    border-radius: 8px;
+    margin: 16px;
+    
+}
+
+.todo-form input{
+    font-size: 20px;
+}
+
+.todo-form button{
+    font-size: 20px;
+    border: none;
+    background-color: #191970;
+    color: white;
+    padding: 8px;
+    margin: 0 6px;
+}
+
+
+.todo-list{
+    background-color: #AFEEEE;
+    width: 600px;
+    border-radius: 8px;
+    padding: 32px;
+}
+
+.todo{
+    background-color: #7B68EE;
+    width: 80%;
+    padding: 5px;
+    margin: 16px auto;
+    border-radius: 8px;
+}
+
 .done{
     text-decoration: line-through;
+    opacity: .2;
 }
+

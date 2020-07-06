@@ -9,7 +9,7 @@ class  TodoList extends React.Component {
 
     render(){
         return(
-            <>
+            <div className='todo-list'>
                 {
                     this.props.todos.map( item =>{
                         return <Todo  
@@ -19,7 +19,7 @@ class  TodoList extends React.Component {
                     })
                 }
                 
-            </>
+            </div>
 
         )
     }

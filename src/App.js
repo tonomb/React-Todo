@@ -68,7 +68,7 @@ class App extends React.Component {
     
     this.setState({
       toDo: notCompleted
-    })
+    },() => {localStorage.setItem('items', JSON.stringify(this.state.toDo))})
     
     
   }
@@ -76,14 +76,14 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <h2>Welcome to your Todo App!</h2>
-        <TodoList 
-          todos={this.state.toDo} 
-          toggleCompleted={this.toggleCompleted} />
+      <div className='app'>
+        <h2 className='app-title'>Welcome to your Todo App!</h2>
         <TodoForm 
           addItem={this.addItem}
           clearCompleted={this.clearCompleted}/>
+        <TodoList 
+          todos={this.state.toDo} 
+          toggleCompleted={this.toggleCompleted} />
       </div>
     );
   }
